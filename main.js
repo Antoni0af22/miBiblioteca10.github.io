@@ -16,14 +16,11 @@ onAuthStateChanged(auth, async (user) => {
   if (user) {
     loginCheck(user);
     try {
-      const querySnapshot = await getDocs(collection(db, "posts"));
-      setupPosts(querySnapshot.docs);
       console.log("todo bien chamo");
     } catch (error) {
       console.log(error)
     }
   } else {
-    setupPosts([]);
     loginCheck(user);
   }
 });
