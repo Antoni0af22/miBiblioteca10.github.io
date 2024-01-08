@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded',async () =>{
 
     //const querySnapshots = await getLibros();
     onGetLibros((querySnapshot)=>{
-        let html = ''
+        librosContainer.innerHTML
 
         querySnapshot.forEach((doc) => {        
             const libro = doc.data()
