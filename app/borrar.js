@@ -10,12 +10,14 @@ window.addEventListener('DOMContentLoaded',async () =>{
 
         querySnapshot.array.forEach(doc => {        
             const libro = doc.data()
-            html += '
-                <div>
-                    <h3>${libro.titulo}</h3>
-                    <p>${libro.autor},${libro.editorial}</p>
-                    <p>${libro.isbn},${libro.fecha}</p>
-                </div>';
+            librosContainer.innerHTML += `
+            <div class="card card-body mt-2 border-primary">
+            <h3 class="h5">${libro.titulo}</h3>
+            <p>${libro.autor}</p>
+            <p>${libro.editorial}</p>
+            <p>${libro.isbn}</p>
+            <p>${libro.fecha}</p>
+            <div>`;
         });
 
         librosContainer.innerHTML = html;
