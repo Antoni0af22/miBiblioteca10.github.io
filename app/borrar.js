@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded',async () =>{
     onGetLibros((querySnapshot)=>{
         let html = ''
 
-        querySnapshot.array.forEach(doc => {        
+        querySnapshot.forEach((doc) => {        
             const libro = doc.data()
             librosContainer.innerHTML += `
             <div class="card card-body mt-2 border-primary">
